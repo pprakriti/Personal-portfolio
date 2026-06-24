@@ -1,0 +1,52 @@
+
+
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap');
+
+
+@theme {
+  --font-sora: 'Sora', sans-serif;
+  --color-brand-200: #DCE8F7;  /* soft blue – lightest (replaces sky-200) */
+  --color-brand-400: #A9C7E4;  /* soft blue              (replaces sky-400) */
+  --color-brand-500: #8FB1DD;  /* soft blue              (replaces sky-500) */
+  --color-brand-600: #6E97C7;  /* friendly blue – main   (replaces sky-600) */
+}
+
+body {
+  font-family: var(--font-sora);
+}
+
+:root {
+  @apply bg-white text-black leading-5;
+  line-height: 1.2; /* 120% fonti-size is 40, line-height is 48 */
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  /* Animate the jump instead of snapping */
+  scroll-behavior: smooth;
+  scroll-padding-top: 6rem; /* ≈ your header height */
+
+}
+
+
+header,
+footer {
+  @apply container mx-auto px-4 py-4 lg:px-20 lg:py-6; /* design has header, footer with lef/right 80px, top/bottom 24px */
+}
+
+section {
+  @apply container mx-auto px-4 py-10 lg:px-20 lg:py-[60px]; /* design has header, footer with lef/right 80px, top/bottom 60px but tailwind
+  doesn't have py-15 */
+}
+
+
+.customSmallShadow {
+  box-shadow: 5px 5px 5px rgba(0, 0, 255, 0.65);
+}
+
+.customShadow {
+  box-shadow: 10px 10px 5px rgba(0, 0, 255, 0.65);
+}
